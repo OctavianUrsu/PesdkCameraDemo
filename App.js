@@ -2,11 +2,7 @@
 import React, {PureComponent} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RNCamera} from 'react-native-camera';
-import {
-  PESDK,
-  PhotoEditorModal,
-  Configuration,
-} from 'react-native-photoeditorsdk';
+import {PESDK} from 'react-native-photoeditorsdk';
 
 class App extends PureComponent {
   render() {
@@ -17,7 +13,7 @@ class App extends PureComponent {
             this.camera = ref;
           }}
           style={styles.preview}
-          type={RNCamera.Constants.Type.front}
+          type={RNCamera.Constants.Type.back}
           flashMode={RNCamera.Constants.FlashMode.off}
           androidCameraPermissionOptions={{
             title: 'Permission to use camera',
