@@ -232,6 +232,12 @@ PODS:
     - PhotoEditorSDK (~> 10.7)
     - React
     - React-RCTImage
+  - RNVideoEditorSDK (2.3.2):
+    - React
+    - React-RCTImage
+    - VideoEditorSDK (~> 10.7)
+  - VideoEditorSDK (10.7.4):
+    - imglyKit (= 10.7.4)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -264,6 +270,7 @@ DEPENDENCIES:
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNPhotoEditorSDK (from `../node_modules/react-native-photoeditorsdk`)
+  - RNVideoEditorSDK (from `../node_modules/react-native-videoeditorsdk`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -271,6 +278,7 @@ SPEC REPOS:
     - boost-for-react-native
     - imglyKit
     - PhotoEditorSDK
+    - VideoEditorSDK
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -325,6 +333,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNPhotoEditorSDK:
     :path: "../node_modules/react-native-photoeditorsdk"
+  RNVideoEditorSDK:
+    :path: "../node_modules/react-native-videoeditorsdk"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -358,6 +368,8 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   RNPhotoEditorSDK: 19574d5c0539e61981f6485b0c79760433f426a4
+  RNVideoEditorSDK: 1907b5d1ef57172d9dccf49adf599adc11d9d490
+  VideoEditorSDK: 3bf51714fe67107fd82e0a21a6723122475a00b5
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: e6efdc84e4785750e3732f71099202bd2249a178

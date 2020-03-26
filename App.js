@@ -3,6 +3,7 @@ import React, {PureComponent} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RNCamera} from 'react-native-camera';
 import {PESDK} from 'react-native-photoeditorsdk';
+import {VESDK} from 'react-native-videoeditorsdk';
 
 class App extends PureComponent {
   render() {
@@ -32,7 +33,19 @@ class App extends PureComponent {
           <TouchableOpacity
             onPress={this.takePicture.bind(this)}
             style={styles.capture}>
-            <Text style={{fontSize: 14}}> SNAP </Text>
+            <Text style={{fontSize: 14}}> Snap </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={this.takeVideo.bind(this)}
+            style={styles.capture}>
+            <Text style={{fontSize: 14}}> Rec </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              this.camera.stopRecording();
+            }}
+            style={styles.capture}>
+            <Text style={{fontSize: 14}}> Stop </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -44,6 +57,14 @@ class App extends PureComponent {
       const options = {quality: 0.5, base64: true};
       const data = await this.camera.takePictureAsync(options);
       PESDK.openEditor(data.uri);
+    }
+  };
+
+  takeVideo = async () => {
+    if (this.camera) {
+      const options = {quality: 0.5, base64: true};
+      const data = await this.camera.recordAsync(options);
+      VESDK.openEditor(data.uri);
     }
   };
 }
